@@ -1,6 +1,6 @@
 package uz.akamiumi.tacocloud.tacos.web;
 
-import com.fasterxml.jackson.databind.util.Converter;
+import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 import uz.akamiumi.tacocloud.tacos.Ingredient;
 
@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Component
-abstract class IngredientByIdConverter implements Converter<String, Ingredient> {
+class IngredientByIdConverter implements Converter<String, Ingredient> {
 
   private Map<String, Ingredient> ingredientMap = new HashMap<>();
   public IngredientByIdConverter() {
